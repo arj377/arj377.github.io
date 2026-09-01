@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Arjun Nair</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header class="site-header">
+            <a class="name" href="index.html">Arjun Nair</a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="https://github.com/arj377">GitHub</a>
+                <a href="resume.pdf">Resume</a>
+            </nav>
+        </header>
+
+        <section class="page-heading">
+            <p class="eyebrow">Selected Work</p>
+            <h1>Projects</h1>
+            <p>
+                Systems I've built to understand what happens beneath the abstractions.
+            </p>
+        </section>
+
+        <section class="project" id="arm">
+            <div class="project-heading">
+                <div>
+                    <p class="project-type">Embedded Systems</p>
+                    <h2>Bare-Metal ARM Motor Controller</h2>
+                </div>
+
+                <a href="YOUR_ARM_GITHUB_URL">Source ↗</a>
+            </div>
+
+            <p>
+                A real-time motor-control system built from scratch on an ARM Cortex-M3
+                without an operating system or runtime. I implemented the startup path,
+                linker-controlled memory layout, interrupt-driven execution, and direct
+                register-level peripheral interfaces.
+            </p>
+
+            <div class="metrics">
+                <span>20 kHz PWM</span>
+                <span>1 kHz control loop</span>
+                <span>&lt;10 μs jitter</span>
+            </div>
+
+            <h3>System Architecture</h3>
+
+            <div class="diagram">
+                <div class="box">
+                    Timer
+                    <small>1 kHz IRQ</small>
+                </div>
+
+                <span class="arrow">→</span>
+
+                <div class="box">
+                    Control Loop
+                    <small>system state</small>
+                </div>
+
+                <span class="arrow">→</span>
+
+                <div class="box">
+                    PWM
+                    <small>20 kHz output</small>
+                </div>
+            </div>
+
+            <div class="diagram">
+                <div class="box">
+                    Fault Inputs
+                    <small>overspeed / stop</small>
+                </div>
+
+                <span class="arrow">→</span>
+
+                <div class="box">
+                    Fault Handler
+                    <small>latched state</small>
+                </div>
+
+                <span class="arrow">→</span>
+
+                <div class="box">
+                    UART
+                    <small>runtime telemetry</small>
+                </div>
+            </div>
+
+            <div class="details">
+                <p>
+                    <strong>What I learned:</strong>
+                    Cortex-M startup, vector tables, linker scripts, memory-mapped I/O,
+                    interrupt timing, fault handling, and debugging hardware/software
+                    interactions.
+                </p>
+            </div>
+        </section>
+
+        <section class="project" id="kv">
+            <div class="project-heading">
+                <div>
+                    <p class="project-type">Systems</p>
+                    <h2>Distributed Key-Value Store</h2>
+                </div>
+
+                <a href="YOUR_KV_GITHUB_URL">Source ↗</a>
+            </div>
+
+            <p>
+                A persistent C++ key-value store built from the storage layer upward,
+                then extended into a three-node distributed service with replication
+                and leader-failure recovery.
+            </p>
+
+            <div class="metrics">
+                <span>5.7K writes/sec</span>
+                <span>202 ms failover</span>
+                <span>3 nodes</span>
+            </div>
+
+            <h3>Storage Path</h3>
+
+            <div class="diagram">
+                <div class="box">Client</div>
+                <span class="arrow">→</span>
+                <div class="box">gRPC</div>
+                <span class="arrow">→</span>
+                <div class="box">KV Store</div>
+                <span class="arrow">→</span>
+                <div class="box">Buffer Pool</div>
+            </div>
+
+            <div class="diagram">
+                <div class="box">WAL</div>
+                <span class="arrow">→</span>
+                <div class="box">Disk</div>
+            </div>
+
+            <h3>Replication</h3>
+
+            <div class="diagram">
+                <div class="box">
+                    Leader
+                    <small>reads + writes</small>
+                </div>
+
+                <span class="arrow">→</span>
+
+                <div class="box">
+                    Follower 1
+                    <small>replica</small>
+                </div>
+
+                <span class="arrow">+</span>
+
+                <div class="box">
+                    Follower 2
+                    <small>replica</small>
+                </div>
+            </div>
+
+            <div class="details">
+                <p>
+                    <strong>What I built:</strong>
+                    disk management, buffer pooling, write-ahead logging, recovery,
+                    gRPC networking, replication, and failure testing.
+                </p>
+            </div>
+        </section>
+
+        <section class="experience">
+            <p class="project-type">Experience</p>
+            <h2>Lotus</h2>
+
+            <p>
+                I contribute to production embedded firmware in C on Zephyr, working
+                on hardware-facing features including power-management changes,
+                device-level fault handling, and reliability improvements for deployed
+                assistive devices.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

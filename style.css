@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f8f7f4;
+    color: #222;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+main {
+    width: min(680px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+a {
+    color: #555;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #000;
+}
+
+
+/* Header */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 70px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.name {
+    color: #222;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+}
+
+nav a {
+    font-size: 15px;
+}
+
+
+/* Homepage */
+
+.intro {
+    margin-top: 20px;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+    color: #777;
+    font-size: 15px;
+}
+
+.lead {
+    max-width: 620px;
+    margin: 0;
+    color: #222;
+    font-size: 21px;
+    line-height: 1.55;
+}
+
+
+/* Selected work */
+
+.featured {
+    margin-top: 70px;
+}
+
+.featured h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.featured-project {
+    display: block;
+    padding: 18px 0;
+    border-top: 1px solid #ddd;
+    color: #222;
+    text-decoration: none;
+}
+
+.featured-project:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.featured-project strong {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.featured-project p {
+    margin: 4px 0 0;
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* Projects page */
+
+.page-heading {
+    margin-bottom: 80px;
+}
+
+.page-heading h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.page-heading p {
+    color: #666;
+}
+
+.project {
+    margin-top: 90px;
+}
+
+.project-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.project-type {
+    margin: 0 0 5px;
+    color: #888;
+    font-size: 13px;
+}
+
+.project h2,
+.experience h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.project > p {
+    margin-top: 16px;
+    color: #444;
+}
+
+
+/* Metrics */
+
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 22px 0 32px;
+}
+
+.metrics span {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Architecture */
+
+h3 {
+    margin: 30px 0 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.diagram {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.box {
+    flex: 1;
+    padding: 13px 8px;
+    border: 1px solid #ddd;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 12px;
+    text-align: center;
+}
+
+.box small {
+    display: block;
+    margin-top: 3px;
+    color: #888;
+    font-size: 10px;
+}
+
+.arrow {
+    color: #999;
+}
+
+
+/* Details */
+
+.details {
+    margin-top: 25px;
+    padding-left: 15px;
+    border-left: 1px solid #bbb;
+}
+
+.details p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Experience */
+
+.experience {
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.experience p:last-child {
+    color: #555;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    main {
+        padding-top: 40px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 50px;
+    }
+
+    .diagram {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
