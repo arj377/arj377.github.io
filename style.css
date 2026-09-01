@@ -264,3 +264,19 @@ h3 {
         transform: rotate(90deg);
     }
 }
+
+.research-artifact {
+    margin-top: 28px;
+}
+
+.research-artifact img {
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.caption {
+    margin-top: 8px;
+    color: #888;
+    font-size: 13px;
+}
