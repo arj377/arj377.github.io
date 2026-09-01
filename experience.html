@@ -28,26 +28,59 @@
         <h1>Experience</h1>
     </section>
 
-    <section class="project">
+<section class="project">
+    <p class="project-type">Embedded Software Engineering Intern</p>
+    <h2>Lotus</h2>
 
-        <p class="project-type">Embedded Software Engineering Intern</p>
-        <h2>Lotus</h2>
+    <p>
+        I worked on production embedded firmware for an assistive wearable,
+        developing low-level C firmware and device drivers using Zephyr RTOS
+        and the nRF Connect SDK. Much of my work involved translating hardware
+        behavior into reliable firmware and debugging across the hardware/software
+        boundary.
+    </p>
 
+    <h3>Power Management</h3>
+
+    <p>
+        I helped migrate the device's power-management firmware from the TI
+        BQ25180 PMIC to the BQ25188. This required working directly with
+        device registers and adapting the existing driver to differences in
+        configuration and interrupt behavior between the two chips.
+    </p>
+
+    <div class="metrics">
+        <span>BQ25180 → BQ25188</span>
+        <span>4.5 V input regulation</span>
+        <span>1.5 A battery protection</span>
+    </div>
+
+    <h3>IR Interference Detection</h3>
+
+    <p>
+        I developed firmware for detecting persistent infrared interference
+        that could prevent the wearable from reliably decoding commands. The
+        system tracks failed decodes over time, distinguishes interference
+        from valid transmissions, and alerts the user when persistent IR noise
+        is detected.
+    </p>
+
+    <div class="metrics">
+        <span>3 failed decodes</span>
+        <span>10-second window</span>
+        <span>user fault alert</span>
+    </div>
+
+    <div class="details">
         <p>
-            Worked on production embedded firmware in C using Zephyr RTOS
-            and the nRF Connect SDK for an assistive wearable.
+            <strong>What I learned:</strong>
+            Zephyr RTOS, nRF Connect SDK, embedded C, device drivers,
+            I2C peripherals, PMIC configuration, register maps, bit masking,
+            hardware interrupts, hardware bring-up, datasheet-driven development,
+            firmware debugging, and working with production embedded systems.
         </p>
-
-        <div class="details">
-            <p>
-                <strong>What I worked on:</strong>
-                device drivers, hardware bring-up, PMIC migration,
-                register-level configuration, IR interference detection,
-                interrupt behavior, and firmware debugging.
-            </p>
-        </div>
-
-    </section>
+    </div>
+</section>
 
 </main>
 </body>
